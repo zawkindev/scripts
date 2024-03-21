@@ -49,6 +49,8 @@ alias re="source ~/.zshrc"
 alias cls="clear"
 alias :q="exit"
 alias vim="nvim"
+alias hx="helix"
+alias tx="tmux"
 
 # git
 alias g="git"
@@ -84,7 +86,7 @@ ZSH_THEME_GIT_PROMPT_SHA_BEFORE="◯  %{$fg_bold[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}"
 
 function prompt_char() {
-  echo "%{$fg[red]%}あい%{$reset_color%}"
+  echo "%{$fg[red]%}$%{$reset_color%}"
 }
 
 # Colors vary depending on time lapsed.
@@ -140,7 +142,7 @@ function git_time_since_commit() {
 }
 
 PROMPT='
-%{$fg[yellow]%}%m%{$reset_color%} %{$fg[white]%}マフトゥナ。%{$reset_color%} %{$fg[red]%}%(5~|%-1~/…/%3~|%4~) %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info)
+%{$fg[yellow]%}%m%{$reset_color%}%{$reset_color%} %{$fg[red]%}%(5~|%-1~/…/%3~|%4~) %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info)
 $(prompt_char) '
 
 RPROMPT='${return_status}$(git_time_since_commit)$(git_prompt_status)%{$reset_color%}'

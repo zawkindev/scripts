@@ -22,3 +22,4 @@ with open(filename, "w") as f:
     f.write(config)
 
 s(f"sudo cp {filename} {path}")
+s(f"rm {filename}")

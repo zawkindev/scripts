@@ -22,6 +22,7 @@ s(f"touch {file_name}")
 with open(file_name, "w") as f:
     f.write(config)
 
+s("paru -Sy powertop")
 s(f"sudo cp {file_name} /etc/systemd/system")
 s(f"rm -rf {file_name}")
 s(f"sudo systemctl enable {file_name}")

@@ -21,6 +21,10 @@ Restart=always
 WantedBy=multi-user.target
 """
 
+
+s("sudo rm -rf /usr/lib/systemd/system/evremap.service")
+s("sudo rm -rf /etc/evremap.toml")
+
 s("paru -Sy evremap-git")
 
 s("touch evremap.toml")
@@ -31,6 +35,7 @@ with open("evremap.toml","w") as f:
 
 with open("evremap.service","w") as f:
     f.write(evremap_service)
+
 
 s("sudo cp evremap.service /usr/lib/systemd/system/")
 s("sudo cp evremap.toml /etc")

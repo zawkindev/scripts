@@ -9,4 +9,4 @@ s("python evremap.py")
 s("python powertop.py")
 s("python touchpad.py")
 s("python zsh.py")
-
+s("python nvim.py")
